@@ -100,6 +100,21 @@ document.getElementById("btn7").onclick = function () {
 }
 
 document.getElementById("btn8").onclick = function () {
-    document.getElementById("statement").innerHTML = statement;
-    document.getElementById("output").innerHTML = a / b;
+    let percentage = +prompt("Enter your percentage of last exams.");
+    document.getElementById("statement").innerHTML = "";
+    if (percentage >= 90) {
+        document.getElementById("output").innerHTML = "You got A Grade";
+    }
+    else if (percentage >= 80) {
+        document.getElementById("output").innerHTML = "You got B Grade";
+    }
+    else if (percentage >= 70) {
+        document.getElementById("output").innerHTML = "You got C Grade";
+    }
+    else if (percentage >= 60) {
+        document.getElementById("output").innerHTML = "You got D Grade";
+    }
+    else {
+        document.getElementById("output").innerHTML = "You got F Grade";
+    }
 }
